@@ -1,42 +1,20 @@
-'use client'
-
- 
-
-import { useState } from "react";
+import React from 'react';
+import { useSearch } from '@/context/SearchContext';
 
 import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
 
-import "react-datepicker/dist/react-datepicker.css";
-
-// function addMonths(arg0: Date, arg1: number) {
-
-//     throw new Error('Function not implemented.');
-
-// }
-
- 
-
- 
-
-const Calender=()=>{
-
- 
-  const [startDate, setStartDate] = useState<Date |null>(new Date());
+const Calender: React.FC = () => {
+  const { departureDate, updateDepartureDate } = useSearch();
 
   return (
-<DatePicker
+    <DatePicker
       showIcon
-      selected={startDate}
-      onChange={(date) => setStartDate(date)}
-      minDate={startDate}
+      selected={departureDate}
+      onChange={(date) => updateDepartureDate(date)}
+      minDate={departureDate}
     />
-  )
- 
+  );
+};
 
-}
-
- 
-
- 
-
-export default Calender
+export default Calender;

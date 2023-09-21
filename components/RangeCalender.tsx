@@ -1,28 +1,31 @@
-import React, { useState } from 'react'
+import React from 'react';
+import { useSearch } from '@/context/SearchContext';
+
 import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
 
-import "react-datepicker/dist/react-datepicker.css";
+const RangeCalender: React.FC = () => {
+  const { departureDate, returnDate, updateDepartureDate, updateReturnDate } = useSearch();
 
-const RangeCalender = () => {
-    const [startDate, setStartDate] = useState(new Date());
-    const [endDate, setEndDate] = useState<Date |null>(null);
-    const onChange = (dates:[Date,Date]) => {
-      const [start, end] = dates;
-      setStartDate(start);
-      setEndDate(end);
-    };
-    return (
-      <DatePicker
-        selected={startDate}
-        onChange={onChange}
-        startDate={startDate}
-        endDate={endDate}
-        minDate={startDate}
-        selectsRange
+  const onChange = (dates: [Date, Date]) => {
+    const [start, end] = dates;
+    
+    // Update the context with the selected dates
+    updateDepartureDate(start);
+    updateReturnDate(end);
+  };
 
-          isClearable
-      />
-    );
-}
+  return (
+    <DatePicker
+      selected={departureDate}
+      onChange={onChange}
+      startDate={departureDate}
+      endDate={returnDate}
+      minDate={departureDate}
+      selectsRange
+      isClearable
+    />
+  );
+};
 
-export default RangeCalender
+export default RangeCalender;

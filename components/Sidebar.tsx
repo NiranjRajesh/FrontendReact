@@ -1,5 +1,6 @@
 import React from "react";
-import Image from 'next/image';
+
+import Image from "next/image";
 
 import {
   AiOutlineHistory,
@@ -7,38 +8,50 @@ import {
   AiOutlineMessage,
 } from "react-icons/ai";
 
+import { BiSolidHome, BiTime, BiSupport } from "react-icons/bi";
+
+import { RiToggleLine } from "react-icons/ri";
 
 const Sidebar = () => {
   return (
     <div className="sidebar-container">
       <div className="logo-container">
-      <Image
+        <h2>Voyage</h2>
+
+        {/* <Image
+
       src="/assets/logo.png"
+
       width={80}
+
       height={80}
+
       alt="logo"
-    />
+
+    /> */}
       </div>
+
       <ul className="navigations">
         <li>
-          <AiOutlineHome className="nav-icon" />
+          <BiSolidHome className="nav-icon" />
 
           <span>Home</span>
         </li>
+
         <li>
-         
-            <AiOutlineHistory className="nav-icon" />
-        
+          <BiTime className="nav-icon" />
+
           <span>History</span>
         </li>
+
         <li>
-        
-            <AiOutlineMessage className="nav-icon" />
-        
+          <BiSupport className="nav-icon" />
+
           <span>Support</span>
         </li>
       </ul>
-      <p>theme</p>
+
+      <RiToggleLine className="nav-icon" />
     </div>
   );
 };

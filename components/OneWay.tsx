@@ -16,6 +16,7 @@ function OneWay({ tripType }: { tripType: string }) {
                <label htmlFor="travel-from">From</label>
                 <input
                   type='text'
+                  autoComplete="off"
                   placeholder='From'
                   name='travel-from'
                   value={from}
@@ -31,6 +32,7 @@ function OneWay({ tripType }: { tripType: string }) {
                   type='text'
                   placeholder='To'
                   name="travel-to"
+                  autoComplete="off"
                   value={to}
               onChange={(e) => setTo(e.target.value)}
                 />

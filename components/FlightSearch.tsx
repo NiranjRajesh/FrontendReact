@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import TripSelector from './TripSelector'
 import TripSearch from './TripSearch'
+import MultiCity from './MultiCity';
 
 const FlightSearch = () => {
   const [tripType, setTripType] = useState('roundTrip');
@@ -16,6 +17,7 @@ const FlightSearch = () => {
     
       {tripType === 'roundTrip' &&<TripSearch/>}
       {tripType === 'oneWay' && <TripSearch/>}
+      {tripType=='multiCity' && <MultiCity/>}
       {/* {tripType === 'multiCity' && <MultiCity tripType={''} />} */}
     </div>
    

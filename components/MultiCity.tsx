@@ -6,7 +6,7 @@ interface Flight {
   date: string;
 }
 
-function MyComponent({ tripType }: { tripType: string }) {
+function MyComponent() {
   const [from, setFrom] = useState<string>('');
   const [to, setTo] = useState<string>('');
 

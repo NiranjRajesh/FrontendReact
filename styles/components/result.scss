@@ -1,0 +1,58 @@
+.search-route{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.t-airport-title{
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.t-airport-iata{
+    font-size: 2rem;
+    font-weight: 600;
+}
+.from-airport-container,.to-airport-container{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding:1em;
+    margin-bottom: 2em;
+}
+.card-img{
+    height:20px;
+    width:20px;
+}
+
+.card-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.page-section{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+  
+    & button{
+        padding:1em 1.5em;
+        background-color:#3C88EF;
+        color:#ffffff;
+        border-radius: 10px;
+
+    }
+   
+}
+.trip-button-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width:100%;
+}
+.route-results{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
