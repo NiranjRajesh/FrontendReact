@@ -26,21 +26,21 @@ function Searchresult() {
     };
 
   // Check if searchResult is empty or undefined
-  if (!searchResult || searchResult.length === 0) {
-    // Render a loading state or a message when there are no search results
-    return (
-      <div className='search-result-container'>
-        <div className="search-result-heading">
-          <h4>Loading...</h4>
-        </div>
-      </div>
-    );
-  }
+  // if (!searchResult || searchResult.length === 0) {
+  //   // Render a loading state or a message when there are no search results
+  //   return (
+  //     <div className='search-result-container'>
+  //       <div className="search-result-heading">
+  //         <h4>Loading...</h4>
+  //       </div>
+  //     </div>
+  //   );
+  // }
 
   // Render the search results when available
   return (
     <div className='search-result-container'>
-      <div className="search-result-heading">
+      {/* <div className="search-result-heading">
         <h4>Result</h4>
       </div>
       <div className="page-section">
@@ -77,9 +77,9 @@ function Searchresult() {
         
       </div>
     </div>: <div> not route</div>
-}
+} */}
 
-{isModalOpen && selectedRoute && (
+{/* {isModalOpen && selectedRoute && ( */}
         <div className="modal">
           <div className="modal-content">
             <div className="modal-header">
@@ -88,20 +88,22 @@ function Searchresult() {
             </div>
             <div className="modal-body">
               
-              <p>{selectedRoute.airportTo}</p>
+              {/* <p>{selectedRoute.airportTo}</p>
               <p>{selectedRoute.airportFrom}</p>
-              <p>{selectedRoute.commonDuration}</p>
+              <p>{selectedRoute.commonDuration}</p> */}
 
               <div className="day-grid">
-             
-               <p>Monday</p>
-               <p>Tuesday</p>
-               <p>Wednesday</p>
-               <p>Thursday</p>
-               <p>Friday</p>
-               <p>Saturday</p>
-               <p>Sunday</p>
               
+               <p>Mon</p>
+               <p>Tue</p>
+               <p>Wed</p>
+               <p>Thu</p>
+               <p>Fri</p>
+               <p>Sat</p>
+               <p>Sun</p>
+               <div className='day-box'>
+<p>yes</p>
+               </div>
               </div>
 
 
@@ -111,7 +113,7 @@ function Searchresult() {
       
           </div>
         </div>
-      )}
+      {/* )} */}
     </div>
   );
 }

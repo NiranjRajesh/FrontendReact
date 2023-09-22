@@ -13,19 +13,28 @@
 // }
 .cabinclass-container{
   background-color: #f5f7fa;
-  margin: 2rem;
+  height:5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
 }
+
 .visible-checker{
-  margin-right: 1rem;
+  
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .invisible-checkbox{
   display: none;
   
 }
 .cabin-checker {
-  width: 1rem;
+  width: 15px;
 
-  height: 1rem;
+  height: 15px;
 
   border-radius: 50%; /* Create a circular shape */
 

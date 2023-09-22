@@ -45,6 +45,7 @@ const CabinClassSelector: React.FC = () => {
 
   return (
     <div className='cabinclass-container'>
+      
       <label className='visible-checker'>
         <span className="cabin-checker"></span>
         <input
