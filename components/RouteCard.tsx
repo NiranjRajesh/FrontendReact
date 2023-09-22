@@ -1,19 +1,21 @@
 import { MultiCityInfo } from '@/context/SearchContext'
 import { stringToDateformat } from '@/util/dateformatter';
-import React from 'react'
+import React, { MouseEventHandler } from 'react'
+import { on } from 'stream';
 
 
 interface RouteCardProps {
   route: MultiCityInfo;
   date:string;
+  onClick:MouseEventHandler<HTMLDivElement>;
 }
-const RouteCard: React.FC<RouteCardProps> = ({route,date}) => {
+const RouteCard: React.FC<RouteCardProps> = ({route,date, onClick}) => {
   return (
-    <div className="card">
+    <div className="card" onClick={onClick}>
 
       <div className="card-header">
       <img src={route.AirlineInfo.logo} className='card-img' alt="Card Image" />
-      <h3>{route.ariline}</h3>
+      <h3>{route.airline}</h3>
       </div>
 
  

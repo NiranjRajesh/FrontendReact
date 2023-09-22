@@ -11,6 +11,7 @@ const Calender: React.FC = () => {
     <DatePicker
       showIcon
       selected={departureDate}
+      placeholderText='dd/mm/yy'
       onChange={(date) => updateDepartureDate(date)}
       minDate={departureDate}
     />
