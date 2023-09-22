@@ -20,6 +20,7 @@ const RangeCalender: React.FC = () => {
       selected={departureDate}
       onChange={onChange}
       startDate={departureDate}
+      placeholderText='dd/mm/yy - dd/mm/yy'
       endDate={returnDate}
       minDate={departureDate}
       selectsRange

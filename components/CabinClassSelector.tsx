@@ -4,7 +4,7 @@ import { useSearch } from '@/context/SearchContext';
 const CabinClassSelector: React.FC = () => {
   const { cabinClass, updateCabinClass } = useSearch(); // Use the context values
 
-  const cabinClasses: string[] = ["ECO", "FIRST", 'BUSSINESS'];
+  const cabinClasses: string[] = ["ECO", "FIRST", 'BUS'];
 
   const handleClassChange = (cabin: string) => {
     if (cabin === 'ALL') {

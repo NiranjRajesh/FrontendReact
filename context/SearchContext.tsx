@@ -31,11 +31,23 @@ export interface AirlineInfo {
  
 }
 
-interface Route {
+ export interface Route {
   id: number;
   airportFrom: string;
   airportTo: string;
-  ariline: string;
+  airline: string;
+  commonDuration:number;
+  Monday:string;
+  Tuesday:string;
+  Wednesday:string;
+  Thursday:string;
+  Friday:string;
+  Saturday:string;
+  Sunday:string;
+  ClassBusiness:boolean;
+  ClassEconomy:boolean;
+  ClassFirst:boolean;
+
   ResAirportTo: ResAirportInfo;
   ResAirportFrom: ResAirportInfo;
   AirlineInfo: AirlineInfo;
@@ -48,16 +60,13 @@ interface MulticityResponse {
   route: Route[];
 }
 
-interface Route {
-  date: string;
-  departure: string;
-  arrival: string;
-}
+
 export interface MultiCityInfo {
   id: number;
   airportFrom: string;
   airportTo: string;
-  ariline: string;
+  airline: string;
+  commonDuration: number;
   ResAirportTo: {
     code: string;
     IATA: string;

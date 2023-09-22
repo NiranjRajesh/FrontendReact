@@ -6,7 +6,7 @@ const AirlineSelector: React.FC = () => {
   const {selectedAirlines, updateSelectedAirlines } = useSearch();
 
 const {airlinesAvailable}=useFilterContext()
-console.log(airlinesAvailable)
+
 
 
 

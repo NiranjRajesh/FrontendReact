@@ -1,4 +1,4 @@
-import { useSearch } from '@/context/SearchContext';
+import { Route, useSearch } from '@/context/SearchContext';
 import React, { useState } from 'react';
 import RouteCard from './RouteCard';
 import { useFilterContext } from '@/context/FilterContext';
@@ -7,7 +7,23 @@ function Searchresult() {
   const { searchResult } = useSearch();
   const {tripType}=useFilterContext()
   const [page,setPage]=useState(0);
-  console.log(searchResult);
+  const [isModalOpen, setIsModalOpen] = useState(false); // State for modal visibility
+  const [selectedRoute, setSelectedRoute] = useState<Route |null>(null); // State for selected RouteCard data
+ 
+
+    // Function to open the modal and set the selected >RouteCard data
+    const openModal = (routeData:Route) => {
+ console.log(routeData)
+      setSelectedRoute(routeData);
+      console.log(selectedRoute)
+      setIsModalOpen(true);
+    };
+  
+    // Function to close the modal
+    const closeModal = () => {
+      setSelectedRoute(null);
+      setIsModalOpen(false);
+    };
 
   // Check if searchResult is empty or undefined
   if (!searchResult || searchResult.length === 0) {
@@ -57,11 +73,45 @@ function Searchresult() {
           </div>
         </div>
         <div className="route-results">
-         {searchResult[page].route.map((value)=><RouteCard  route={value} date={searchResult[page].date}/>)}
+         {searchResult[page].route.map((value,index)=><RouteCard  route={value} date={searchResult[page].date} key={index}  onClick={() => openModal(value) }/>)}
         
       </div>
     </div>: <div> not route</div>
 }
+
+{isModalOpen && selectedRoute && (
+        <div className="modal">
+          <div className="modal-content">
+            <div className="modal-header">
+            <h2>Route Details</h2>
+            <button onClick={closeModal}>Close</button>
+            </div>
+            <div className="modal-body">
+              
+              <p>{selectedRoute.airportTo}</p>
+              <p>{selectedRoute.airportFrom}</p>
+              <p>{selectedRoute.commonDuration}</p>
+
+              <div className="day-grid">
+             
+               <p>Monday</p>
+               <p>Tuesday</p>
+               <p>Wednesday</p>
+               <p>Thursday</p>
+               <p>Friday</p>
+               <p>Saturday</p>
+               <p>Sunday</p>
+              
+              </div>
+
+
+              
+
+            </div>
+      
+          </div>
+        </div>
+      )}
     </div>
   );
 }
