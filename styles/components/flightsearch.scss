@@ -1,0 +1,25 @@
+.flight-search-container {
+    height: 70%;
+
+    width: 100%;
+
+    background-color: #ffffff;
+
+    border-radius: 5px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    border-radius: 20px;
+}
+
+.flight-content {
+    display: flex;
+
+    flex-direction: column;
+}
+
+.flight-search {
+    height: 100%;
+}

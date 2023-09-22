@@ -10,23 +10,17 @@ const Greeter = () => {
   
   return (
     <FilterProvider>
-      
       <SearchProvider>
     <div className="greeter-container">
       <div className="greeter-l">
       <FlightSearch/>
       <div className="placeholder">
-        
         <Searchresult/>
       </div>
-    
       </div>
       <div className="greeter-r">
         <Filter/>
       </div>
-      
-
-
     </div>
     </SearchProvider>
     </FilterProvider>

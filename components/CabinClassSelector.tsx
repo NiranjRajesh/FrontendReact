@@ -4,7 +4,7 @@ import { useSearch } from '@/context/SearchContext';
 const CabinClassSelector: React.FC = () => {
   const { cabinClass, updateCabinClass } = useSearch(); // Use the context values
 
-  const cabinClasses: string[] = ["ECO", "FIRST", 'BUSSINESS'];
+  const cabinClasses: string[] = ["ECO", "FIRST", 'BUS'];
 
   const handleClassChange = (cabin: string) => {
     if (cabin === 'ALL') {
@@ -44,8 +44,9 @@ const CabinClassSelector: React.FC = () => {
   const isAllSelected =cabinClass.includes('ALL');
 
   return (
-    <div>
+    <div className='cabinclass-container'>
       <label className='visible-checker'>
+        <span className="cabin-checker"></span>
         <input
         className="invisible-checkbox"
           type="checkbox"
@@ -56,12 +57,14 @@ const CabinClassSelector: React.FC = () => {
       </label>
       {cabinClasses.map((cabin) => (
         <label  className='visible-checker' key={cabin}>
+        
           <input
             type="checkbox"
             className="invisible-checkbox"
             checked={cabinClass.includes(cabin)}
             onChange={() => handleClassChange(cabin)}
           />
+            <span className="cabin-checker"></span>
           {cabin}
         </label>
       ))}

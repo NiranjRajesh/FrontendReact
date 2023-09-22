@@ -1,0 +1,73 @@
+
+.card {
+    border: 1px solid #ddd;
+  
+    border-radius: 20px;
+  
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  
+    overflow: hidden;
+  
+    margin: 10px;
+  
+    width: 300px;
+  
+    height: 200px;
+  
+    display: flex;
+  
+    flex-direction: column;
+  
+    padding: 20px;
+  }
+  
+  .card img {
+    width: 40%;
+  
+    height: auto;
+  }
+  
+  .card-content {
+    padding: 10px;
+  
+    display: flex;
+  
+    align-items: center;
+  
+    height: 30%;
+  
+    font-size: large;
+  }
+  
+  .card-para {
+    padding: 5px;
+  
+    align-items: center;
+  
+    height: 20%;
+  
+    margin: 0 0;
+  
+    p {
+      font-size: 5px;
+  
+      text-align: center;
+    }
+  }
+  
+  .card h3 {
+    font-size: 18px;
+  
+    margin: 0;
+  }
+  
+  .card p {
+    font-size: 14px;
+  
+    margin: 8px 0;
+  }
+  
+  .search-suggestion > .Card {
+    width: calc(50% - 10px); /* 50% width with margin between cards */
+  }
+  

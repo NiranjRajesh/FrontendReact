@@ -1,0 +1,64 @@
+/* Style for the label to resemble a checkbox */
+// .visible-checker::before {
+//   content: '';
+//   display: inline-block;
+//   width: 1rem;
+//   height: 1rem;
+//   border-radius: 50%; /* Create a circular shape */
+//   border: 2px solid #007bff; /* Border for the checkbox (blue color) */
+//   background-color: #fff; /* Background color of the circular checkbox */
+//   margin-right: 5px; /* Spacing between the circular checkbox and label */
+//   vertical-align: middle;
+//   transition: background-color 0.2s, border-color 0.2s; /* Add a smooth transition for color changes */
+// }
+.cabinclass-container{
+  background-color: #f5f7fa;
+  margin: 2rem;
+}
+.visible-checker{
+  margin-right: 1rem;
+}
+.invisible-checkbox{
+  display: none;
+  
+}
+.cabin-checker {
+  width: 1rem;
+
+  height: 1rem;
+
+  border-radius: 50%; /* Create a circular shape */
+
+  border: 2px solid #007bff; /* Border color for the circle */
+
+  display: inline-block;
+
+  position: relative;
+
+  cursor: pointer;
+
+  margin-right: .2rem;
+}
+
+/* Style for the checked state of the label */
+.invisible-checkbox:checked + .cabin-checker::before {
+  content: "";
+
+  width: 1rem;
+
+  height: 1rem;
+
+  border-radius: 50%;
+
+  background-color: #007bff; /* Color of the checkmark */
+
+  position: absolute;
+
+  top: 50%;
+
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  display: block;
+}

@@ -19,7 +19,7 @@ console.log(airlinesAvailable)
   };
 
   return (
-    <div>
+    <div className='airline-container'>
   
       <ul className='airline-list'>
         {airlinesAvailable.map((airline:AirlineInfo) => (

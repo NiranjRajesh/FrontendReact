@@ -17,18 +17,6 @@ const Sidebar = () => {
     <div className="sidebar-container">
       <div className="logo-container">
         <h2>Voyage</h2>
-
-        {/* <Image
-
-      src="/assets/logo.png"
-
-      width={80}
-
-      height={80}
-
-      alt="logo"
-
-    /> */}
       </div>
 
       <ul className="navigations">
