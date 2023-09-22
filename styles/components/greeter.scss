@@ -6,6 +6,8 @@
   width: 100%;
 
   display: flex;
+
+  font-family: "Nunito Sans";
 }
 
 .flight-search-container {
@@ -162,11 +164,21 @@
 
     border-radius: 10px;
 
-    margin-right: 2em;
+    margin-right: 1em;
+  }
+
+  & label {
+    font-size: 0.75rem;
+
+    color: #6b6e72;
+
+    font-weight: 600;
+
+    margin-bottom: 0.5em;
   }
 
   & .search-btn {
-    padding: 1em 2em;
+    padding: 1em 1.5em;
 
     background-color: #71c879;
 
@@ -179,6 +191,8 @@
     font-weight: 600;
 
     color: #ffffff;
+
+    margin-top: 1.6em;
   }
 }
 
