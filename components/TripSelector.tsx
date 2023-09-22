@@ -21,7 +21,7 @@ import { useFilterContext } from '@/context/FilterContext';
                 checked={tripType === 'oneWay'}
                 onChange={handleTripTypeChange}
               />
-              <label className='ml-1'>OneWay</label>
+              <label className='ml-1'>One-Way</label>
             </div> 
         <div className='roundTrip'>
               <input

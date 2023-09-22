@@ -18,17 +18,17 @@ interface ResAirportInfo {
   Delayed30: number;
   Delayed45: number;
   OnTime: number;
-  modifiedAt: string;
+
 }
 
-interface AirlineInfo {
+export interface AirlineInfo {
   name: string;
-  code: string;
+  iata: string;
   is_lowcost: boolean;
   logo: string;
   is_scheduled_passenger: number;
   is_cargo: number;
-  modifiedat: string;
+ 
 }
 
 interface Route {
@@ -85,7 +85,7 @@ export interface MultiCityInfo {
   };
   AirlineInfo: {
     name: string;
-    code: string;
+    iata: string;
     is_lowcost: boolean;
     logo: string;
     is_scheduled_passenger: number;
