@@ -1,12 +1,15 @@
 import React,{useEffect} from 'react';
-import { AirlineInfo, useSearch } from '@/context/SearchContext';
-import { useFilterContext } from '@/context/FilterContext';
+import { useSearch } from '@/context/SearchContext';
 
 const AirlineSelector: React.FC = () => {
   const {selectedAirlines, updateSelectedAirlines } = useSearch();
 
-const {airlinesAvailable}=useFilterContext()
-console.log(airlinesAvailable)
+  const airlines: string[] = [
+    'Airline A',
+    'Airline B',
+    'Airline C',
+    // Add more airlines as needed
+  ];
 
 
 
@@ -20,23 +23,17 @@ console.log(airlinesAvailable)
 
   return (
     <div>
-  
-      <ul className='airline-list'>
-        {airlinesAvailable.map((airline:AirlineInfo) => (
-          <li key={airline.iata} className='airline-item'>
-            <label className="airline-label">
+      <h3>Select Airlines:</h3>
+      <ul>
+        {airlines.map((airline) => (
+          <li key={airline}>
+            <label>
               <input
                 type="checkbox"
-                className='custom-checkbox'
-                checked={selectedAirlines.includes(airline.iata)}
-                onChange={() => handleAirlineChange(airline.iata)}
+                checked={selectedAirlines.includes(airline)}
+                onChange={() => handleAirlineChange(airline)}
               />
-             
-            <span className="checkmark">
-            </span>
-            <span>{airline.iata}</span>
-            
-             
+              {airline}
             </label>
           </li>
         ))}

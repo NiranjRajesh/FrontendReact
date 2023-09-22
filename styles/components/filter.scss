@@ -1,49 +1,79 @@
+
+
 .filter-container {
-  background-color: #ffffff;
 
-  height: 90%;
+    background-color: #ffffff;
 
-  width: 100%;
+    height: 90%;
 
-  border-radius: 10px;
+    width: 100%;
 
-  display: flex;
+    border-radius: 10px;
 
-  flex-direction: column;
-}
+    display: flex;
 
-.filter-heading-container {
-  width: 100%;
+    flex-direction: column;
 
-  display: flex;
+   
 
-  flex-direction: row;
-
-  align-items: center;
-
-  justify-content: space-between;
-
-  padding: 10px;
-}
-
-.filter-title {
-  text-align: center;
-}
-
-.reset-title {
-  text-align: end;
-}
-
-//  Journey Type
-
-.tripSelector {
-  .trip-selector {
-    margin: 0 0;
-
-    background-color: #f5f7fa;
   }
 
-  & .radio-buttons {
+ 
+
+  .filter-heading-container {
+
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: row;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 10px;
+
+  }
+
+ 
+
+ 
+
+ 
+
+  .filter-title {
+
+    text-align: center;
+
+  }
+
+ 
+
+  .reset-title {
+
+    text-align: end;
+
+   
+
+  }
+
+ 
+
+.tripSelector{
+
+ 
+
+.trip-selector {
+
+    margin: 0 0;
+
+  }
+
+  &
+
+  .radio-buttons {
+
     display: flex;
 
     flex-direction: row;
@@ -53,23 +83,32 @@
     gap: 20px; /* Adjust the gap between radio options */
 
     margin-bottom: 10px;
+
   }
 
-  & .radio-option {
+  &
+
+  .radio-option {
+
     display: flex;
 
     align-items: center;
 
     margin-right: 10px; /* Add space between radio button and label */
-  }
-  & input[type="radio"] {
+
+  }&
+
+ 
+
+  input[type='radio'] {
+
     appearance: none;
 
-    width: 0.67rem;
+    width: 20px;
 
-    height: 0.67rem;
+    height: 20px;
 
-    border: 2px solid #3c88ef;
+    border: 2px solid #3C88EF;
 
     border-radius: 50%;
 
@@ -80,38 +119,51 @@
     cursor: pointer;
 
     flex: 0 0 auto; /* Prevent radio button from growing */
-  }
 
-  & input[type="radio"]:checked {
-    background-color: #3c88ef;
   }
 
   &
 
- 
+  input[type='radio']:checked {
+
+    background-color: #3C88EF;
+
+  }
+
+  &
 
   /* Customize label styles as needed */
 
- 
-
   label {
-    font-size: 0.95rem;
+
+    font-size: 16px;
 
     flex: 1; /* Allow label to expand and fill available space */
 
     /* Add other label styles as needed */
-  }
+
+  }  
+
 }
 
-.cabinClass {
-  .cabin-class-selector {
+.cabinClass{
+
+ 
+
+.cabin-class-selector {
+
     display: flex;
 
     flex-direction: column;
 
     align-items: flex-start;
-  }
-  & .row {
+
+  }&
+
+ 
+
+  .row {
+
     display: flex;
 
     justify-content: space-between;
@@ -121,147 +173,121 @@
     width: 100%;
 
     margin-bottom: 10px; /* Add vertical spacing between rows */
+
   }
 
-  & label {
+  &
+
+  label {
+
     display: flex;
 
     align-items: center;
+
   }
 
-  & input[type="checkbox"] {
+  &
+
+  input[type='checkbox'] {
+
     margin-right: 5px; /* Add spacing between the checkbox and label text */
 
     margin-left: 20px;
+
   }
-}
-
-.airlineSelection {
-  margin: 0;
-
-  text-align: left;
-
-  padding: 10px;
-
-  ul {
-    list-style: none; /* Remove default list styles */
-
-    padding: 0; /* Remove default padding */
-
-    overflow-y: scroll;
-  }
-
-  & li {
-    margin-bottom: 10px; /* Add vertical margin between airline options */
-  }
-
-  & label {
-    display: flex;
-
-    align-items: center;
-  }
-
-  & input[type="checkbox"] {
-    margin-right: 10px; /* Add space between checkbox and airline name */
-  }
-
-  &
 
  
+
+ 
+
+}
+
+ 
+
+.airlineSelection{
+
+margin: 0;
+
+text-align: left;
+
+ 
+
+padding: 10px;
+
+    ul {
+
+        list-style: none; /* Remove default list styles */
+
+        padding: 0; /* Remove default padding */
+
+        overflow-y:scroll ;
+
+      }
+
+      &
+
+      li {
+
+        margin-bottom: 10px; /* Add vertical margin between airline options */
+
+      }
+
+      &
+
+      label {
+
+        display: flex;
+
+        align-items: center;
+
+      }
+
+      &
+
+      input[type="checkbox"] {
+
+        margin-right: 10px; /* Add space between checkbox and airline name */
+
+      }
+
+      &
 
       /* Style for selected airlines (you can customize these styles) */
 
- 
-
       input[type="checkbox"]:checked + label {
-    font-weight: bold; /* Make the text bold for selected airlines */
 
-    color: #007bff; /* Change text color for selected airlines */
-  }
+        font-weight: bold; /* Make the text bold for selected airlines */
 
-  &
+        color: #007bff; /* Change text color for selected airlines */
 
- 
+      }
+
+      &
 
       /* Style for the entire component container (you can customize these styles) */
 
+      div {
+
+        background-color: #f5f7fa;
+
+        padding: 20px;
+
+        border-radius: 5px;
+
+      }
+
+     
+
+}
+
+h4{
+
+    padding: 10px;
+
+    margin:0;
+
+  }
+
  
 
-      div {
-    // background-color: #f5f7fa;
-
-    padding: 20px;
-
-    border-radius: 5px;
-  }
-}
-
-h4 {
-  padding: 10px;
-
-  margin: 0;
-}
-
-/* AirlineSelector.css */
-
-.airline-list {
-  list-style-type: none;
-
-  padding: 0;
-}
-
-.airline-item {
-  margin-bottom: 10px;
-}
-
-.airline-label {
-  display: flex;
-
-  align-items: center;
-}
-
-.custom-checkbox {
-  display: none; /* Hide the default checkbox */
-}
-
-.checkmark {
-  width: 1rem;
-
-  height: 1rem;
-
-  border-radius: 50%; /* Create a circular shape */
-
-  border: 2px solid #007bff; /* Border color for the circle */
-
-  display: inline-block;
-
-  position: relative;
-
-  cursor: pointer;
-
-  margin-right: 10px;
-}
-
-/* Style for the checkmark when checkbox is checked */
-
-.custom-checkbox:checked + .checkmark::before {
-  content: "";
-
-  width: 1rem;
-
-  height: 1rem;
-
-  border-radius: 50%;
-
-  background-color: #007bff; /* Color of the checkmark */
-
-  position: absolute;
-
-  top: 50%;
-
-  left: 50%;
-
-  transform: translate(-50%, -50%);
-
-  display: block;
-}
+ 

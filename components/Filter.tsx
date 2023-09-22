@@ -7,7 +7,7 @@ const Filter = () => {
   return (
     <div className='filter-container'>
     <div className='filter-heading-container'>
-     
+      <div className='spacer'></div>
       <div className='filter-title'>
         <h3>Filter</h3>
       </div>
@@ -25,7 +25,6 @@ const Filter = () => {
         <CabinClassSelector/>
     </div>
     <div className='airlineSelection'>
-      <h4>Airline</h4>
       <AirlineSelection/>
 
     </div>
